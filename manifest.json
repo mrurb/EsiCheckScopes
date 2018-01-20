@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Esi scope checker",
+    "description":"This extension allows the user to check all scope checkboxes on esi",
+    "version": "0.1",
+    "content_scripts": [
+        {
+          "matches": [
+            "https://esi.tech.ccp.is/ui/*"
+          ],
+          "js": ["node_modules/jquery/dist/jquery.min.js","content.js"]
+        }
+      ],
+      "background": {
+        "scripts": ["background.js"]
+      },
+      "browser_action": {
+        "default_title": "Check all scopes"
+      }
+}
+
